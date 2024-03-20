@@ -39,6 +39,8 @@ export type Settings = {
   textToSpeech: TextToSpeechSettings;
   providers: ProviderData;
   currentProvider: ChatCraftProvider;
+  compressionFactor: number;
+  maxCompressedFileSizeMb: number;
 };
 
 export const defaults: Settings = {
@@ -56,6 +58,8 @@ export const defaults: Settings = {
   },
   providers: {},
   currentProvider: new OpenAiProvider(),
+  compressionFactor: 1,
+  maxCompressedFileSizeMb: 20,
 };
 
 export const key = "settings";
